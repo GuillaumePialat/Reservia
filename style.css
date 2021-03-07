@@ -1,8 +1,10 @@
 /* COULEUR */
-
-html, body, ul, div, h1, h2, h3, h3, h4, h5, h6, p, input {
+@font-face {
     font-family: "Raleway";
     src: url(fonts/Raleway-VariableFont_wght.ttf) format(ttf);
+}
+html, body, ul, div, h1, h2, h3, h3, h4, h5, h6, p, input {
+    font-family: "Raleway";
 }
 
 html, body, ul, div, h1, h2, h3, h3, h4, h5, h6, p, input {
@@ -99,7 +101,7 @@ ul, li {
 
 .header .accrochetitre {
     font-size: 1.2em;
-    margin-bottom: 5px 0;
+    margin-bottom: 5px;
 }
 
 .header .accroche p {
@@ -560,7 +562,7 @@ h2.Titre {
 }
 
     .site {
-        box-sizing: none;
+        box-sizing: content-box;
         padding: 0%;
     }
     .titrefiltres-mobile {
@@ -701,3 +703,4 @@ h2.Titre {
     .main .activites__liste .container .one-picture {
         height: 300px;
     }
+}
