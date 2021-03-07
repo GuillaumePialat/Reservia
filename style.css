@@ -48,14 +48,11 @@ ul, li {
 }
 /* CSS CONTENEUR */
 
-@media (min-width: 1200px) {
-.site {
-    width: 75%;
-    margin: 0 auto; 
-} 
+
+
 
 .site {
-    padding: 0 8px; 
+    padding: 0 30px; 
 }
 
 
@@ -158,7 +155,8 @@ ul, li {
     justify-content: flex-start;
     align-items: center;
     flex-wrap: wrap;
-    margin-bottom: 15px; 
+    margin-bottom: 15px;
+    cursor: pointer;
 }
 
 .header .filtres .titrefiltres {
@@ -166,9 +164,8 @@ ul, li {
     color: #232323f3; 
 }
 
-@media (max-width: 767px) {
-.header .filtres .titrefiltres {
-    flex-basis: 100%; } 
+.titrefiltres-mobile {
+    display: none;
 }
 
 .header .filtres .filtre__nom { /* BORDEURE DES FILTRES + TEXTE */
@@ -200,13 +197,14 @@ ul, li {
     justify-content: center;
     align-items: center;
     color: #0065FC;
-    background-color: #F2F2F2;
+    background-color: #D6E7FF;
     border-radius: 50%;
     margin-right: 8px;
     position: absolute;
     top: -2px;
     left: -3px; 
 }
+
 
 .header .information {
     margin-bottom: 25px; 
@@ -246,7 +244,7 @@ h2.Titre {
 
 .main .heberg aside { /* BORDURE BACKGROUND ASISDE */
     order: 2;
-    flex-basis: 30%;
+    flex-basis: 40%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -262,7 +260,7 @@ h2.Titre {
     justify-content: space-between;
     align-items: center;
     height: 25px;
-    margin: 15px 15px 30px; 
+    margin: 15px 15px 15px; 
 }
 
 .main .heberg aside .card__populaire {
@@ -274,7 +272,7 @@ h2.Titre {
     margin: 15px; 
 }
 
-.main .heberg aside .card__populaire:hover { /* LIEN DE SUVOL CARTE POP */
+.main .heberg aside .card__populaire:hover { /* LIEN DE SUVOL ACTIVITÉ */
     transform: scale(1.01);
     box-shadow: 0 0 3px 2px #d8d7d7; 
 }
@@ -296,15 +294,17 @@ h2.Titre {
 }
 
 .main .heberg aside .card__populaire .card__image {
-    height: 7rem;
-    width: 35%;
-    overflow: hidden; 
+    height: 9rem;
+    width: 40%;
+    overflow: hidden;
 }
 
 .main .heberg aside .card__populaire .card__image img {
-    height: 100%;
+    height: 120%;
     width: 100%;
-    border-radius: 8px 0 0 8px; 
+    border-radius: 8px 0 0 8px;
+    object-fit: cover;
+    object-position: center;
 }
 
 .main .heberg .hebergement_liste {
@@ -315,10 +315,6 @@ h2.Titre {
     background-color: #F2F2F2;
     order: 1;
     flex-grow: 1; 
-}
-
-.main .heberg .hebergement_liste {
-    margin: 15px 15px 30px; 
 }
 
 .main .heberg .hebergement_liste .hebergement_groupe {
@@ -338,7 +334,8 @@ h2.Titre {
     background-color: #fff;
     padding: 5px;
     border-radius: 8px;
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
+    cursor: pointer;
 }
 
 .main .heberg .hebergement_liste .hebergement_groupe .card__hebergement:hover {
@@ -380,6 +377,7 @@ h2.Titre {
 .main .heberg .hebergement_liste .afficher-plus {
     display: block;
     flex-basis: 100%; 
+    font-weight: bold;
 }
 
 
@@ -397,23 +395,309 @@ h2.Titre {
     line-height: 1;
 }
 
-/* .footer .footer__section ul {
-    margin-top: 10px; 
-} 
+/* ACTIVITÉS */
 
-
-.footer {
+.container {
     display: flex;
-    flex-direction: column; 
+    padding: 10px;
+    justify-content: space-between;
+    background-color: white;
+}
+
+.container p {
+    font-size: .7em;
+    font-weight: bold;
+    padding : 3%
+}
+
+.two-pictures {
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    margin-right: 20px;
+    margin-left: 20px;
+    border-radius: 8px;
+}
+
+.deuxdeux:hover {
+    transform: scale(1.01);
+    box-shadow: 0 0 3px 2px #d8d7d7; 
+}
+
+.deuxun:hover {
+    transform: scale(1.01);
+    box-shadow: 0 0 3px 2px #d8d7d7; 
 }
 
 
+.one-picture:hover { /* LIEN DE SUVOL ACTIVITÉ */
+    transform: scale(1.01);
+    box-shadow: 0 0 3px 2px #d8d7d7; 
 
-.footer .footer__section u, .footer .footer__section li {
-    display: block; 
-    height: 40px;
 }
 
-.footer .footer__section ul li {
-    height: 30px;
-}*/
+
+.deuxun {
+    border-radius: 10px;
+    box-shadow:  4px 2px 4px 2px #b1b1b14b;
+}
+
+.deuxdeux {
+    border-radius: 10px;
+    box-shadow:  4px 2px 4px 2px #b1b1b14b;
+}
+
+.one-picture {
+    border-radius: 10px;
+    box-shadow:  4px 2px 4px 2px #b1b1b14b;
+    height: 455px;
+}
+    
+  
+  /*
+   * Images
+   */
+  a img {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    width: 100%;
+  }
+  /*
+   * Hauteur des images
+   */
+   @media screen and (min-width: 992px) {
+  #img-1 {
+    height: 410px;
+    width: 330px;
+  }
+  
+  #img-2 {
+    height: 240px;
+    width: 310px;
+  }
+  #img-3 {
+    height: 115px;
+    width: 310px;
+  }
+  #img-4 {
+    height: 410px;
+    width: 330px;
+  }
+  #img-5 {
+    height: 155px;
+    width: 270px;
+  }
+  #img-6 {
+    height: 200px;
+  }
+}
+  
+  @media screen and (max-width: 766px) {
+    .container {
+      width: 100%;
+      flex-wrap: wrap;
+    }
+    .two-pictures {
+      flex-wrap: wrap;
+    }
+  }
+
+
+  /* RESPONSIVE */
+
+
+
+
+
+@media (max-width: 766px){
+.header {
+    width: 100%;
+    padding: 0;
+}
+}
+
+@media (max-width: 766px){
+.header nav {
+    position: relative;
+    height: 160px;
+}
+}
+
+
+@media (max-width: 766px){
+.header nav .logo {
+    position: absolute;
+    display: block;
+    height: 60px;
+    left: 15px;
+    top: 15px;
+    
+}
+}
+
+@media (max-width: 766px){
+.header nav .liens {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: stretch;
+    align-items: stretch;
+    width: 100%;
+}
+}
+
+@media (max-width: 766px){
+.header nav .liens .premierlien {
+    display: flex;
+    justify-content: space-between;
+}
+}
+
+@media (max-width: 766px){
+.header nav .liens .premierlien li.hbr {
+    font-weight: 700;
+    border-top: none;
+    border-bottom: 3px solid #0065FC;
+}
+
+    .site {
+        box-sizing: none;
+        padding: 0%;
+    }
+    .titrefiltres-mobile {
+        display: block;
+    }
+    .titrefiltres{
+        display: none;
+    }
+}
+
+
+@media (max-width: 766px) {
+.header nav .liens .premierlien .li {
+    margin-right: 1105px;
+    width: 50%;
+    height: 100px;
+}
+}
+
+@media (max-width: 766px) {
+.header nav .liens .secondlien {
+    display: flex;
+    justify-content: flex-end;
+}
+}
+
+@media (max-width: 766px){
+.header .accroche, .header .lieu, .header .filtres, .header .information {
+    padding: 0 8px;
+}
+}
+
+@media (max-width: 766px){
+.main .heberg {
+    flex-direction: column;
+    justify-content: space-between;
+}
+#img-2 {
+    height: 240px;
+  }
+}
+
+
+@media (max-width: 766px){
+.main .heberg aside {
+    order: 1;
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 0;
+    padding: 0;
+}
+}
+
+@media (max-width: 766px){
+.main .heberg aside .Titre {
+    width: 90%;
+}
+}
+@media (max-width: 766px){
+.main .heberg .hebergement_liste .hebergement_groupe .card__hebergement .img {
+    width: 100%;
+    height: 12rem;
+}
+}
+
+@media (max-width: 766px){
+.main .heberg .hebergement_liste {
+    margin-top: 20px;
+    order: 2;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+}
+}
+
+@media (max-width: 766px){
+.main .heberg .hebergement_liste .hebergement_groupe {
+    flex-direction: column;
+}
+}
+
+
+@media (max-width: 766px){
+.main .heberg .hebergement_liste .hebergement_groupe .card__hebergement {
+    width: 85%;
+    box-shadow: 0 0 6px 3px rgb(180 178 178 / 27%);
+    border-radius: 15px;
+}
+}
+
+@media (max-width: 766px){
+.main .activites__liste {
+    justify-content: center;
+    align-items: center;
+}
+}
+
+@media (max-width: 766px){
+.main .activites__liste h2 {
+    width: 90%;
+}
+}
+
+@media (max-width: 766px){
+.main .activites__liste .container {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 100%;
+    padding: 0;
+    height: auto;
+    align-items: center;
+}
+}
+
+@media (max-width: 766px){
+.main .activites__liste .container .one-picture .two-pictures {
+    flex-basis: 12rem !important;
+    width: 90%;
+    margin-top: 15px;
+}
+}
+
+@media (max-width: 766px){
+.footer {
+    flex-direction: column;
+    padding-bottom: 0;
+}
+}
+
+@media (max-width: 766px){
+.footer__section {
+    margin-bottom: 30px;
+}
+}
+
+@media (max-width: 766px){
+    .main .activites__liste .container .one-picture {
+        height: 300px;
+    }
