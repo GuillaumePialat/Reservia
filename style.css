@@ -400,11 +400,11 @@ h2.Titre {
 /* ACTIVITÉS */
 
 .container {
-    display: flex;    
+    display: flex;
     padding: 10px;
-    justify-content: space-around;        
-}
-
+    justify-content: space-around;
+    height: 500px;
+  }
 .container p {
     font-size: .7em;
     font-weight: bold;    
@@ -503,41 +503,38 @@ h2.Titre {
 }
 
 
-   @media screen and (max-width: 766px) {
+@media screen and (max-width: 766px) {
     .container {
-        flex-wrap: wrap;  
-        flex-direction: column;  
-        height: 100%; 
+      flex-wrap: wrap;
+      flex-direction: column;
+      height: 200%;
     }
     .one {
-        margin-bottom: 10px;
-        margin-top: 10px;
-        height: 100px;
+      margin-bottom: 10px;
+      margin-top: 10px;
     }
-
+  
     .two-center {
-        margin-right:0;
+      margin-right: 0;
     }
-
+  
     .two {
-        margin-left:0;
-        display: block;
-        height: 200px;
+      margin-left: 0;
     }
-
+  
     #vieuxport {
-        background-position: left bottom; 
-        height: 200px;
-        
+      background-position: left bottom;
     }
-
-    #frioul {
-     /*height: 200px;*/
+  
+    #calanques,
+    #fortpom,
+    #frioul,
+    #lagarde,
+    #parclong,
+    #vieuxport {
+      height: 200px;
     }
-
-    #calanques {
-       height: 200px;
-    }
+  }
 
 
 
