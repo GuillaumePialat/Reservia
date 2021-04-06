@@ -400,109 +400,145 @@ h2.Titre {
 /* ACTIVITÉS */
 
 .container {
-    display: flex;
+    display: flex;    
     padding: 10px;
-    justify-content: space-between;
-    background-color: white;
+    justify-content: space-around;        
 }
 
 .container p {
     font-size: .7em;
-    font-weight: bold;
-    padding : 3%
+    font-weight: bold;    
 }
 
-.two-pictures {
+.one {
+    flex:1;
+    box-shadow:  4px 2px 4px 2px #b1b1b14b;
+    border-radius: 10px;
+}
+
+
+.one-margin {
+    margin-bottom:20px;   
+}
+
+.two-center {
+    margin-right:20px;   
+}
+
+.two {
     flex-direction: column;
-    justify-content: space-between;
-    width: 100%;
-    margin-right: 20px;
-    margin-left: 20px;
-    border-radius: 8px;
+    justify-content: space-between;   
+    flex: 1;
+    margin-left:20px;
+    display:flex;    
 }
 
-.deuxdeux:hover {
-    transform: scale(1.01);
-    box-shadow: 0 0 3px 2px #d8d7d7; 
+.one-small {
+    flex-grow: 1;
 }
 
-.deuxun:hover {
-    transform: scale(1.01);
-    box-shadow: 0 0 3px 2px #d8d7d7; 
+.one-medium {
+    flex-grow: 2;
 }
 
-
-.one-picture:hover { /* LIEN DE SUVOL ACTIVITÉ */
-    transform: scale(1.01);
-    box-shadow: 0 0 3px 2px #d8d7d7; 
-
+#vieuxport {
+    background-image: url("images/activites/2_large/Vieuxport.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    flex: 1;
+    height:90%;    
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;        
 }
 
-
-.deuxun {
-    border-radius: 10px;
-    box-shadow:  4px 2px 4px 2px #b1b1b14b;
+#fortpom {
+    background-image: url("images/activites/2_large/Fortpom.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;    
+    height:80%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;    
+    flex-grow: 2;
+    background-position: left bottom;   
 }
 
-.deuxdeux {
-    border-radius: 10px;
-    box-shadow:  4px 2px 4px 2px #b1b1b14b;
+#frioul {
+    background-image: url("images/activites/2_large/frioul.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    flex-grow: 1;
+    height:70%;    
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;    
+    background-position: left bottom;   
 }
 
-.one-picture {
-    border-radius: 10px;
-    box-shadow:  4px 2px 4px 2px #b1b1b14b;
-    height: 455px;
+#calanques {
+    background-image: url("images/activites/2_large/calanques.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    flex: 1;
+    height:90%;    
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;    
 }
+
+#lagarde {
+    background-image: url("images/activites/2_large/lagarde.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;    
+    height:80%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;    
     
-  
-  /*
-   * Images
-   */
-  a img {
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-    width: 100%;
-  }
-  /*
-   * Hauteur des images
-   */
-   @media screen and (min-width: 992px) {
-  #img-1 {
-    height: 410px;
-    width: 330px;
-  }
-  
-  #img-2 {
-    height: 240px;
-    width: 310px;
-  }
-  #img-3 {
-    height: 115px;
-    width: 310px;
-  }
-  #img-4 {
-    height: 410px;
-    width: 330px;
-  }
-  #img-5 {
-    height: 155px;
-    width: 270px;
-  }
-  #img-6 {
-    height: 200px;
-  }
 }
-  
-  @media screen and (max-width: 766px) {
+
+#parclong {
+    background-image: url("images/activites/2_large/parclong.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;    
+    height:80%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;       
+}
+
+
+   @media screen and (max-width: 766px) {
     .container {
-      width: 100%;
-      flex-wrap: wrap;
+        flex-wrap: wrap;  
+        flex-direction: column;  
+        height: 100%; 
     }
-    .two-pictures {
-      flex-wrap: wrap;
+    .one {
+        margin-bottom: 10px;
+        margin-top: 10px;
+        height: 100px;
     }
-  }
+
+    .two-center {
+        margin-right:0;
+    }
+
+    .two {
+        margin-left:0;
+        display: block;
+        height: 200px;
+    }
+
+    #vieuxport {
+        background-position: left bottom; 
+        height: 200px;
+        
+    }
+
+    #frioul {
+     /*height: 200px;*/
+    }
+
+    #calanques {
+       height: 200px;
+    }
+
 
 
   /* RESPONSIVE */
@@ -655,38 +691,6 @@ h2.Titre {
 }
 
 @media (max-width: 766px){
-.main .activites__liste {
-    justify-content: center;
-    align-items: center;
-}
-}
-
-@media (max-width: 766px){
-.main .activites__liste h2 {
-    width: 90%;
-}
-}
-
-@media (max-width: 766px){
-.main .activites__liste .container {
-    flex-direction: column;
-    flex-wrap: nowrap;
-    width: 100%;
-    padding: 0;
-    height: auto;
-    align-items: center;
-}
-}
-
-@media (max-width: 766px){
-.main .activites__liste .container .one-picture .two-pictures {
-    flex-basis: 12rem !important;
-    width: 90%;
-    margin-top: 15px;
-}
-}
-
-@media (max-width: 766px){
 .footer {
     flex-direction: column;
     padding-bottom: 0;
@@ -699,8 +703,10 @@ h2.Titre {
 }
 }
 
-@media (max-width: 766px){
-    .main .activites__liste .container .one-picture {
-        height: 300px;
+
+@media (min-width: 1200px){
+    .Site {
+        width: 75%;
+        margin: 0 auto;
     }
 }
